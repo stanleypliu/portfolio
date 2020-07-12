@@ -1,0 +1,58 @@
+// Resets
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+ul {
+    list-style-type: none;
+    display: inline-flex;
+}
+
+
+button {
+    background-color: transparent;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+// Base container used for almost all elements on the website
+.container {
+    margin: 0 auto;
+    width: 100%;
+
+    max-width: $max-site-width;
+
+    &--basic {
+        @include flex;
+    }
+
+    &--center-vh {
+        @include flex;
+        @include flex-h-center;
+        @include flex-v-center;
+    }
+
+    &--between {
+        @include flex;
+        @include flex-h-between;
+    }
+
+    &--between-center {
+        @include flex;
+        @include flex-h-between;
+        @include flex-v-center;
+    }
+}

@@ -1,0 +1,61 @@
+// Colours
+$white: #ffffff;
+$black: #000000;
+
+
+// Fonts
+$body-font: "Oxygen Regular", sans-serif;
+
+$body-font-color: $black;
+$body-font-size: rem-calc(16);
+$body-font-size-larger: rem-calc(20);
+$body-line-height: 1.4;
+
+  // Header font sizes and calculations
+
+  $header-font: "Oxygen Bold", sans-serif;
+
+  $header-font-color: $black;
+  $header-font-size: rem-calc(54);
+  $header-two-font-size: rem-calc(35);
+  $header-three-font-size: rem-calc(23);
+
+  // Small font
+
+  $small-font-size: rem-calc(12);
+
+$normal: 400;
+$bold: 700;
+
+// Borders
+
+$border-black: 1px solid $black;
+$border-white: 1px solid $white;
+$border-invisible: 1px solid transparent;
+
+$border-xsmall-radius: 3px;
+$border-small-radius: 5px;
+$border-button-radius: 2px;
+
+// Spacings - used for elements
+
+$space-tiny: rem-calc(2.5);
+$space-xsmall: rem-calc(10);
+$space-small: rem-calc(20);
+$space-medium: rem-calc(40);
+$space-large: rem-calc(80);
+
+
+// Breakpoints
+
+$breakpoint-small: 480px;
+$breakpoint-medium: 960px;
+$breakpoint-large: 1440px;
+
+  // Gutters
+
+  $gutter: rem-calc(40);
+
+$site-width: rem-calc($breakpoint-large);
+$max-site-width: $site-width + ($gutter * 2);
+
