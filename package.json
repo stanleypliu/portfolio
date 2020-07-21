@@ -7,7 +7,11 @@
   "license": "MIT",
   "devDependencies": {
     "@parcel/resolver-default": "^2.0.0-alpha.3",
-    "parcel": "^2.0.0-beta.1",
+    "parcel": "latest",
     "sass": "^1.26.10"
+  },
+  "scripts": {
+    "build": "parcel build index.html",
+    "start": "parcel serve index.html"
   }
 }

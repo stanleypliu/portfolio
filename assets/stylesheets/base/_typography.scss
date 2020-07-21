@@ -1,7 +1,7 @@
 body {
     font-family: $body-font;
     font-size: $body-font-size;
-    font-weight: $normal;
+    font-weight: $regular;
     color: $body-font-color;
 }
 
@@ -10,7 +10,7 @@ h1,
 h2,
 h3 {
     font-family: $header-font;
-    font-weight: $regular;
+    font-weight: $bold;
 }
 
 h1 {

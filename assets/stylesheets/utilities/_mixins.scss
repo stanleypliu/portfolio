@@ -176,13 +176,13 @@
 .flex { @include flex(); }
 .flex-inline { @include flex-inline(); }
 .flex-row { @include flex-row(); }
-.flex-row-reverse { @include flex-row-reverse(); }
+
 .flex-column { @include flex-column(); }
-.flex-column-reverse { @include flex-column-reverse(); }
+
 .flex-nowrap { @include flex-nowrap(); }
 .flex-wrap { @include flex-wrap(); }
-.flex-wrap-reverse { @include flex-wrap-reverse(); }
-.flex-1 { @include flex-1(); }
+
+
 .flex-grow { @include flex-grow(); }
 .flex-no-grow { @include flex-no-grow(); }
 .flex-shrink { @include flex-shrink(); }
@@ -200,8 +200,7 @@
 .flex-v-start { @include flex-v-start(); }
 .flex-v-end { @include flex-v-end(); }
 .flex-v-center {@include flex-v-center(); }
-.flex-v-baseline { @include flex-v-baseline(); }
-.flex-v-stretch { @include flex-v-stretch(); }
+
 .flex-vs-start { @include flex-vs-start(); }
 .flex-vs-center { @include flex-vs-center(); }
 .flex-vs-baseline { @include flex-vs-baseline(); }

@@ -1,13 +1,16 @@
-// Font
-@import 'assets/stylesheets/fonts/_oxygen.scss';
+// Fonts imported in a separate css file
+
+// Variables
+@import 'assets/stylesheets/base/variables.scss';
 
 // Utilities
-@import './utilities/*';
+@import 'assets/stylesheets/utilities/mixins.scss';
+@import 'assets/stylesheets/utilities/rem-calc.scss';
 
 // // Base
-@import './base/variables';
-@import './base/base';
-@import './base/typography';
+
+@import 'assets/stylesheets/base/base.scss';
+@import 'assets/stylesheets/base/typography.scss';
 
 // // Layout
 // @import './layouts/*';
