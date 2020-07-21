@@ -7,11 +7,17 @@
   "license": "MIT",
   "devDependencies": {
     "@parcel/resolver-default": "^2.0.0-alpha.3",
+    "@vue/component-compiler-utils": "^3.1.2",
     "parcel": "latest",
-    "sass": "^1.26.10"
+    "sass": "^1.26.10",
+    "vue-template-compiler": "^2.6.11"
   },
   "scripts": {
     "build": "parcel build index.html",
     "start": "parcel serve index.html"
+  },
+  "dependencies": {
+    "vue": "^2.6.11",
+    "vue-hot-reload-api": "^2.3.4"
   }
 }

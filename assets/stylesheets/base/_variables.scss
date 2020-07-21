@@ -24,7 +24,7 @@ $body-line-height: 1.4;
 
   $small-font-size: rem-calc(12);
 
-  
+$light: 300;
 $regular: 400;
 $bold: 700;
 
@@ -51,12 +51,13 @@ $space-large: rem-calc(80);
 
 $small: 480px;
 $medium: 960px;
-$large: 1440px;
+$large: 1280px;
 
   // Gutters
-
-  $gutter: rem-calc(40);
+  $gutter-small: rem-calc(20);
+  $gutter-medium: rem-calc(30);
+  $gutter-large: rem-calc(40);
 
 $site-width: rem-calc($large);
-$max-site-width: $gutter + $site-width + $gutter;
+
 
