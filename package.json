@@ -14,7 +14,9 @@
   },
   "scripts": {
     "build": "parcel build src/index.html",
-    "start": "parcel serve src/index.html"
+    "start": "parcel serve src/index.html",
+    "dev": "parcel serve --global _debug_ src/index.html --log-level 4"
+ 
   },
   "dependencies": {
     "vue": "^2.6.11",

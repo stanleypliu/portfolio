@@ -2,27 +2,24 @@
 $white: #ffffff;
 $black: #000000;
 
+// Background colours
+$deep-space: #466365;
+$periwinkle: #C4C6E7;
+$silver-pink: #CEB3AB;
+
 
 // Fonts
 $body-font: "Oxygen Regular", sans-serif;
 
-$body-font-color: $black;
-$body-font-size: rem-calc(16);
-$body-font-size-larger: rem-calc(20);
+$body-font-color: $silver-pink;
+
 $body-line-height: 1.4;
 
-  // Header font sizes and calculations
+// Header font sizes and calculations
 
-  $header-font: "Oxygen Bold", sans-serif;
+$header-font: "Oxygen Bold", sans-serif;
 
-  $header-font-color: $black;
-  $header-font-size: rem-calc(72);
-  $header-two-font-size: rem-calc(56);
-  $header-three-font-size: rem-calc(42);
-
-  // Small font
-
-  $small-font-size: rem-calc(12);
+$header-font-color: $periwinkle;
 
 $light: 300;
 $regular: 400;

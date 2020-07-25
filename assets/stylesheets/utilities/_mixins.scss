@@ -1,4 +1,63 @@
 //--------------------------------------------------
+// Colours
+//--------------------------------------------------
+// Note to self, transition-point has to be a decimal for the func to spit out a  
+// percentage, setting the transition point from colour-1 to colour-2
+@mixin gradient($gradient-type, $orientation, $colour-1, $colour-2, $transition-point) {
+    background: $gradient-type($orientation, $colour-1 percentage($transition-point), $colour-2 100%);
+}
+
+
+//--------------------------------------------------
+// Text
+//--------------------------------------------------
+@mixin body-text {
+    font-family: $body-font;
+    font-weight: $regular;  
+}
+
+@mixin small-text {
+    font-family: $body-font;
+}
+
+@mixin header-text {
+    font-family: $header-font;
+    font-weight: $bold;
+    color: $header-font-color;
+}
+
+@mixin h1 {
+    @include header-text;
+    @include responsive(font-size, rem-calc(48), rem-calc(56), rem-calc(64));
+}
+
+@mixin h2 {
+    @include header-text;
+    @include responsive(font-size, rem-calc(40), rem-calc(48), rem-calc(56));
+}
+
+@mixin h3 {
+    @include header-text;
+    @include responsive(font-size, rem-calc(32), rem-calc(40), rem-calc(48));
+}
+
+@mixin p {
+    @include body-text;
+    @include responsive(font-size, rem-calc(16), rem-calc(16), rem-calc(24));
+}
+
+@mixin p-larger {
+    @include body-text;
+    @include responsive(font-size, rem-calc(20), rem-calc(28), rem-calc(36));
+    
+}
+
+@mixin small {
+    @include small-text;
+    @include responsive(font-size, rem-calc(8), rem-calc(12), rem-calc(12));
+}
+
+//--------------------------------------------------
 // responsive mixins
 //--------------------------------------------------
 @mixin breakpoint($breakpoint) {

@@ -27,6 +27,16 @@ button:focus {
     outline: none;
 }
 
+body {
+    // Todo: need to debug mixin
+    // @include gradient(linear-gradient, 0deg, $deep-space, $periwinkle, 0.8);
+    background: linear-gradient(180deg, $deep-space 20%, $periwinkle 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: $body-font-color;
+}
+
 
 // Base container used for almost all elements on the website
 .container {
