@@ -1,4 +1,12 @@
 .hero {
-    @include flex;
-    @include flex-h-between;
+    @include flex-center;
+    height: 20vh;
+    
+
+    &__text {
+        @include flex;
+        @include flex-column;
+        @include flex-h-around;
+        text-align: center;
+    }
 }

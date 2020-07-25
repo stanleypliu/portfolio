@@ -33,9 +33,7 @@ button:focus {
     margin: 0 auto;
     width: 100%;
 
-    @include breakpoint($small){ max-width: rem-calc($small); }
-    @include breakpoint($medium){ max-width: rem-calc($medium); }
-    @include breakpoint($large){ max-width: $site-width; }
+    @include responsive(max-width, $small, $medium, $large);
 
     &--basic {
         @include flex;

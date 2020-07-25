@@ -16,9 +16,9 @@ $body-line-height: 1.4;
   $header-font: "Oxygen Bold", sans-serif;
 
   $header-font-color: $black;
-  $header-font-size: rem-calc(54);
-  $header-two-font-size: rem-calc(35);
-  $header-three-font-size: rem-calc(23);
+  $header-font-size: rem-calc(72);
+  $header-two-font-size: rem-calc(56);
+  $header-three-font-size: rem-calc(42);
 
   // Small font
 
@@ -51,7 +51,7 @@ $space-large: rem-calc(80);
 
 $small: 480px;
 $medium: 960px;
-$large: 1280px;
+$large: 1440px;
 
   // Gutters
   $gutter-small: rem-calc(20);
