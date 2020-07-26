@@ -27,14 +27,35 @@ button:focus {
     outline: none;
 }
 
+// Base styles
 body {
     // Todo: need to debug mixin
     // @include gradient(linear-gradient, 0deg, $deep-space, $periwinkle, 0.8);
-    background: linear-gradient(180deg, $deep-space 20%, $periwinkle 100%);
+    background: linear-gradient(180deg, $deep-space-faded 40%, $periwinkle 100%);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     color: $body-font-color;
+}
+
+h1 {
+    @include h1;
+}
+
+h2 {
+    @include h2;
+}
+
+h3 {
+    @include h3;
+}
+
+p {
+    @include p;
+}
+
+small {
+    @include small;
 }
 
 
