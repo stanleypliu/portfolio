@@ -1,3 +1,37 @@
+// Styling the <nav> itself
+nav {
+    @include flex-center;
+    height: 75vh;
+}
+
+
 .navbar {
-    
+    @include flex-center;
+    width: 100%;
+
+    &__image {
+        display: none;
+
+        &--active {
+            display: block;
+        }
+    }
+
+    &__item {
+        @include flex;
+        @include flex-column;
+
+        &--reverse {
+            @include flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__link {
+        padding: rem-calc(0 30);
+    }
+
+    &__text {
+        color: $grey-light;
+    }
 }

@@ -3,7 +3,7 @@ import Vue from 'vue/dist/vue.esm.js';
 
 // Components
 import Hero from './components/Hero.vue';
-import Navbar from './components/Navbar.vue';
+import NavbarVue from './components/NavbarVue.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
     if(document.getElementById('v-app')) {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         el: '#v-app',
         components: {
             Hero,
-            Navbar
+            NavbarVue
         }
       })
 

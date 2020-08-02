@@ -10,12 +10,11 @@
 
 a {
     text-decoration: none;
-    color: $black;
+    color: inherit;
 }
 
 ul {
     list-style-type: none;
-    display: inline-flex;
 }
 
 
@@ -31,9 +30,8 @@ button:focus {
 body {
     // Todo: need to debug mixin
     // @include gradient(linear-gradient, 0deg, $deep-space, $periwinkle, 0.8);
-    background: linear-gradient(180deg, $deep-space-faded 40%, $periwinkle 100%);
-    background-size: cover;
-    background-repeat: no-repeat;
+
+    background-color: $deep-space-faded;
     height: 100vh;
     color: $body-font-color;
 }
