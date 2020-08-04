@@ -13,7 +13,8 @@
 
 <script>
     import NavbarItem from './NavbarItem.vue';
-    import images from '../../../assets/images/photos/*.png';
+    import revonew from '../../../assets/images/photos/revonew.png';
+    import headshot from '../../../assets/images/photos/headshot.jpg';
 
     export default {
         name: 'NavbarVue',
@@ -22,8 +23,8 @@
         },
         data() {
             return {
-                links: [{ url: '/projects', name: 'Projects', image: images['revonew'] }, 
-                        { url: '/about', name: 'About', image: '' },
+                links: [{ url: '/projects', name: 'Projects', image: revonew }, 
+                        { url: '/about', name: 'About', image: headshot },
                         { url: '/contact', name: 'Contact Me' }]
             }
         }

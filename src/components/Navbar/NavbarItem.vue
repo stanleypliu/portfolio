@@ -6,22 +6,23 @@
             @mouseleave="hover = false"
         >
             <transition name="fade-in">
-                <template v-if="link.image">
+                <template v-if="isPhoto">
                     <img 
                         class="navbar__image"
+                        :id="`navbar__image--${id}`"
                         :src="link.image" 
                         :alt="`Navigation image for ${link.name}`" 
                         v-show="hover"
                     >
                 </template>
-                <template v-else>
-                    <svg
+                <!-- <template v-else> -->
+                    <!-- <svg
                         class="navbar__icon"
                         :alt="`Navigation icon for ${link.name}`" 
                         v-show="hover"
                     >
                     </svg>
-                </template>
+                </template> -->
             </transition>
             <h2 class="navbar__text">
                 <a :href="link.url">
@@ -37,7 +38,10 @@
         name: 'NavbarItem',
         props: {
             link: {
-                type: Object, 
+                type: Object,
+                default: {
+                    type: ''
+                }
             },
             id: Number
         },
@@ -45,6 +49,11 @@
             return {
                 hover: false
             }
-        }
+        },
+        computed: {
+            isPhoto() {
+                this.link.image.split('.').pop() == 'jpg'
+            }
+        },
     }
 </script>

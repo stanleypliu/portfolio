@@ -6,24 +6,36 @@ nav {
 
 // Fade in for image 
 .fade-in-enter-active, .fade-in-leave-active {
-    transition: opacity .2s ease-in-out;
+    transition: opacity .3s ease-in-out;
 }
 
 .fade-in-enter, .fade-in-leave-to {
     opacity: 0;
 }
 
+// Specific CSS for the images
+
+#navbar__image--0 {
+    right: -91%;
+    bottom: 100%;
+}
+
+#navbar__image--1 {
+    right: -63%;
+    top: 100%
+}
+
+// #navbar__icon
 
 .navbar {
     @include flex-center;
     width: 100%;
 
     &__image {
-        max-width: rem-calc(500);
-        position: absolute;
-        right: -75%;
-        bottom: 100%;
+        border-radius: $border-small-radius;
         opacity: 0.6;
+        max-height: 30vh;
+        position: absolute;
     }
 
     &__item {
@@ -34,6 +46,7 @@ nav {
         &--reverse {
             @include flex;
             flex-direction: column-reverse;
+            position: relative;
         }
     }
 

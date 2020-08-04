@@ -4,6 +4,7 @@
             <h2>{{ msg }}</h2>
             <h1>{{ name }}</h1>
             <h3>{{ desc }}</h3>
+            <hr class="hero__hr">
         </div>
     </div>
 </template>

@@ -1,6 +1,13 @@
 .hero {
     @include flex-center;
     height: 25vh;
+    background-color: $grey;
+    
+    &__hr {
+        width: 100%;
+        height: 1px;
+        color: $white;
+    }
     
     &__text {
         @include flex;
@@ -18,4 +25,5 @@
             line-height: 1.7;
         }
     }
+
 }
