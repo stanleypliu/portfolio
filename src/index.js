@@ -3,7 +3,7 @@ import Vue from 'vue/dist/vue.esm.js';
 
 // Components
 import Hero from './components/Hero.vue';
-import NavbarVue from './components/NavbarVue.vue';
+import NavbarVue from './components/Navbar/NavbarVue.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
     if(document.getElementById('v-app')) {
