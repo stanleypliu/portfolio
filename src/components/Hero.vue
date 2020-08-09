@@ -1,11 +1,11 @@
 <template>
     <div class="hero">
+        <div class="hero__bracket"></div>
         <div class="hero__text">
-            <h2>{{ msg }}</h2>
             <h1>{{ name }}</h1>
             <h3>{{ desc }}</h3>
-            <hr class="hero__hr">
         </div>
+        <div class="hero__bracket"></div>
     </div>
 </template>
 
@@ -14,9 +14,8 @@
       name: 'Hero',
       data() {
           return {
-              msg: 'Hello, I\'m',
-              name: 'Stanley',
-              desc: 'A UK-based full stack developer'
+              name: 'STANLEY LIU',
+              desc: 'UK-BASED FULL STACK DEVELOPER'
           }
       },  
     }

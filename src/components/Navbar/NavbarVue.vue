@@ -23,9 +23,9 @@
         },
         data() {
             return {
-                links: [{ url: '/projects', name: 'Projects', image: revonew }, 
-                        { url: '/about', name: 'About', image: headshot },
-                        { url: '/contact', name: 'Contact Me' }]
+                links: [{ url: '/projects', name: 'PROJECTS', image: revonew }, 
+                        { url: '/about', name: 'ABOUT', image: headshot },
+                        { url: '/contact', name: 'CONTACT ME' }]
             }
         }
     }

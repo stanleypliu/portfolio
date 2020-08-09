@@ -16,13 +16,19 @@ nav {
 // Specific CSS for the images
 
 #navbar__image--0 {
-    right: -91%;
+    right: -55%;
     bottom: 100%;
 }
 
 #navbar__image--1 {
-    right: -63%;
+    right: -40%;
     top: 100%
+}
+
+#navbar__svg {
+    @extend .navbar__image;
+    right: 30%;
+    bottom: 100%;
 }
 
 // #navbar__icon
@@ -54,7 +60,7 @@ nav {
         padding: rem-calc(0 100%);
         
         a {
-            color: $header-font-color;
+            color: $white;
             transition: 0.2s ease-in-out;
 
             &:hover {
