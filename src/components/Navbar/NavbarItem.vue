@@ -2,23 +2,19 @@
     <li class="navbar__link">
         <div 
             :class="[ id % 2 == 0 ? 'navbar__item' : 'navbar__item--reverse' ]"
-            @mouseenter="hover = true"
-            @mouseleave="hover = false"
         >
             <template v-if="link.image">
-                <transition name="fade-in">
                     <img 
                         class="navbar__image"
                         :id="`navbar__image--${id}`"
                         :src="link.image" 
                         :alt="`Navigation image for ${link.name}`" 
-                        v-show="hover"
+                        v-if="hover"
                     >
-                </transition>
             </template>
             <template v-else>
                     <svg height='100px' width='100px'  fill="#FFFFFF" 
-                    id="navbar__svg" v-show="hover"
+                    id="navbar__svg" v-if="hover"
                     xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" 
                     viewBox="0 0 100 100" x="0px" y="0px">
                     <title>Artboard 9</title>
@@ -37,7 +33,11 @@
                     V34.73A20.94,20.94,0,1,0,50,55.67ZM50,40.1a5.37,5.37,0,1,1,
                     5.37-5.37A5.37,5.37,0,0,1,50,40.1Z"></path></svg>
             </template> 
-            <h2 class="navbar__text">
+            <h2 
+                class="navbar__text"
+                @mouseenter="hover = true"
+                @mouseleave="hover = false"
+            >
                 <a :href="link.url">
                     {{ link.name }}
                 </a>
