@@ -2,24 +2,26 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Personal portfolio",
-  "main": "index.js",
   "author": "Stanley Liu",
-  "license": "MIT",
+  "scripts": {
+    "build": "parcel build src/index.html",
+    "dev": "parcel serve --global _debug_ src/index.html --log-level 4",
+    "start": "parcel serve src/index.html"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@vue/cli-service": "^4.5.3",
+    "vue": "^2.6.11",
+    "vue-hot-reload-api": "^2.3.4",
+    "vue-router": "^3.2.0"
+  },
   "devDependencies": {
     "@parcel/resolver-default": "^2.0.0-alpha.3",
+    "@vue/cli-plugin-router": "~4.5.0",
     "@vue/component-compiler-utils": "^3.1.2",
     "parcel": "latest",
     "sass": "^1.26.10",
     "vue-template-compiler": "^2.6.11"
   },
-  "scripts": {
-    "build": "parcel build src/index.html",
-    "start": "parcel serve src/index.html",
-    "dev": "parcel serve --global _debug_ src/index.html --log-level 4"
- 
-  },
-  "dependencies": {
-    "vue": "^2.6.11",
-    "vue-hot-reload-api": "^2.3.4"
-  }
+  "license": "MIT"
 }

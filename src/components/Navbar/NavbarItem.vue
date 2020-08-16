@@ -38,9 +38,9 @@
                 @mouseenter="hover = true"
                 @mouseleave="hover = false"
             >
-                <a :href="link.url">
+                <router-link :to='link.route'>
                     {{ link.name }}
-                </a>
+                </router-link>
             </h2>
         </div>
     </li>
