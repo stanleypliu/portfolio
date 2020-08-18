@@ -37,6 +37,7 @@
                 class="navbar__text"
                 @mouseenter="hover = true"
                 @mouseleave="hover = false"
+                @click="showAndScrollToDiv"
             >
                 <router-link :to='link.route'>
                     {{ link.name }}
@@ -61,6 +62,13 @@
         data() {
             return {
                 hover: false
+            }
+        },
+        methods: {
+            showAndScrollToDiv() {
+                const routerView = document.querySelector('.container--router');
+                routerView.style.display = 'block';
+                routerView.scrollIntoView({behavior: 'smooth'});
             }
         }
     }

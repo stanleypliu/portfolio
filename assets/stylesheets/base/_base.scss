@@ -83,4 +83,10 @@ small {
         @include flex-h-between;
         @include flex-v-center;
     }
+
+    &--router {
+        // Initial state upon page load
+        display: none;
+        height: 100vh;
+    }
 }

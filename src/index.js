@@ -8,7 +8,7 @@ Vue.use(VueRouter);
 // Components
 import Hero from './components/Hero.vue';
 import NavbarVue from './components/Navbar/NavbarVue.vue';
-import ProjectCarousel from './components/Carousel/ProjectCarousel.vue';
+import ProjectShowcase from './components/ProjectShowcase.vue';
 
 
 //Routes
@@ -16,7 +16,7 @@ import ProjectCarousel from './components/Carousel/ProjectCarousel.vue';
 const routes = [
   {
     path: '/projects',
-    component: ProjectCarousel
+    component: ProjectShowcase
   },
   {
     path: '/about',

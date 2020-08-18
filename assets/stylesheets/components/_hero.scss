@@ -1,7 +1,10 @@
 .hero {
     @include flex-center;
+    border-bottom: 1px solid $periwinkle;
+    width: 60%;
+    margin: 0 auto;
     height: 25vh;
-    
+
     &__text {
         @include flex;
         @include flex-column;
