@@ -1,0 +1,12 @@
+.project-showcase {
+    background-color: $camel;
+    height: 100vh;
+
+    &__pictures {
+        @include flex-center;
+    }
+
+    &__picture {
+        height: 50vh;
+    }
+}

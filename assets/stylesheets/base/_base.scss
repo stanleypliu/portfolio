@@ -30,7 +30,7 @@ body {
     // Todo: need to debug mixin
     // @include gradient(linear-gradient, 0deg, $deep-space, $periwinkle, 0.8);
 
-    background-color: $deep-space-faded;
+
     height: 100vh;
     color: $body-font-color;
 }
@@ -84,9 +84,14 @@ small {
         @include flex-v-center;
     }
 
+    // Section containers
+    &--home {
+        background-color: $deep-space-faded;
+        height: 100vh;
+    }
+
     &--router {
         // Initial state upon page load
         display: none;
-        height: 100vh;
     }
 }

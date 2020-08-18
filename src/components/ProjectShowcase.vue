@@ -1,11 +1,12 @@
 <template>
     <div class="project-showcase">
-        <h2>Showcase of my work</h2>
-        <div class="project-showcase__pictures">
-            <img :src="revonewPic" alt="">
-            <img :src="justbikesPic" alt="">
-        </div>
-    </div>
+        <h2>PROJECTS</h2>
+
+            <div class="project-showcase__pictures">
+                <img class="project-showcase__picture" :src="revonewPic" alt="Currency-exchange marketplace MVP">
+                <img class="project-showcase__picture" :src="justbikesPic" alt="AirBnB clone for renting bicycles">
+            </div>
+
 </template>
 
 <script>

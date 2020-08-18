@@ -70,6 +70,9 @@
                 routerView.style.display = 'block';
                 routerView.scrollIntoView({behavior: 'smooth'});
             }
+        },
+        computed: {
+            
         }
     }
 </script>
