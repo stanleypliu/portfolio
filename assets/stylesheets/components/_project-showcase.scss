@@ -1,12 +1,45 @@
 .project-showcase {
-    background-color: $camel;
+    background-color: $deep-space-faded;
     height: 100vh;
+
+    h2 {
+        padding: rem-calc(40 40 20 40);
+
+    }
+
+    hr {
+        height: 1px;
+        background-color: $periwinkle;
+        margin-bottom: rem-calc(20);
+    }
+
+    &__item {
+        position: relative;
+    }
 
     &__pictures {
         @include flex-center;
     }
 
     &__picture {
-        height: 50vh;
+        height: 40vh;
+        padding-left: rem-calc(40);
+        padding-right: rem-calc(40);
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(3px 3px 10px $grey);
+        }
+    }
+
+
+
+    &__project-desc {
+        color: $silver-pink;
+        position: absolute;
+        top: 100%;
+        left: rem-calc(40);
+        max-width: 35vw;
     }
 }

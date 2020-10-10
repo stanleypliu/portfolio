@@ -10,10 +10,10 @@ $grey-black: #242424;
 
 // Coolors palette
 $deep-space-faded: #466365;
-$periwinkle: #C4C6E7;
+$periwinkle: #c6c7e4;
 $silver-pink: #CEB3AB;
 $camel: #B49A67;
-$maximum-purple: #BAA5FF;
+$maximum-purple: #8171b4;
 
 $color-map: [
   $periwinkle,
@@ -46,15 +46,6 @@ $border-invisible: 1px solid transparent;
 $border-xsmall-radius: 3px;
 $border-small-radius: 5px;
 $border-button-radius: 2px;
-
-// Spacings - used for elements
-
-$space-tiny: rem-calc(2.5);
-$space-xsmall: rem-calc(10);
-$space-small: rem-calc(20);
-$space-medium: rem-calc(40);
-$space-large: rem-calc(80);
-
 
 // Breakpoints
 

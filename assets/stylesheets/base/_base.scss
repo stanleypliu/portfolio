@@ -28,12 +28,7 @@ button:focus {
 // Base styles
 body {
     color: $body-font-color;
-    height: 100vh;
 }
-
-// Body colour variants
-
-
 
 h1 {
     @include h1;
@@ -86,7 +81,7 @@ small {
 
     // Section containers
     &--home {
-        @include gradient(linear-gradient, 140deg, $camel, $deep-space-faded, 0.4);
+        @include gradient(linear-gradient, 140deg, $camel, rgba($deep-space-faded, 0.6), 0.4);
         height: 100vh;
     }
 

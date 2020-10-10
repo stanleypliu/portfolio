@@ -8,7 +8,7 @@ Vue.use(VueRouter);
 // Components
 import Hero from './components/Hero.vue';
 import NavbarVue from './components/Navbar/NavbarVue.vue';
-import ProjectShowcase from './components/ProjectShowcase.vue';
+import ProjectShowcase from './components/Projects/ProjectShowcase.vue';
 
 
 //Routes

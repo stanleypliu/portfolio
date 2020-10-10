@@ -13,7 +13,7 @@
                     >
             </template>
             <template v-else>
-                    <svg height='100px' width='100px'  fill="#FFFFFF" 
+                    <svg height='100px' width='100px' 
                     id="navbar__svg" v-if="hover"
                     xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" 
                     viewBox="0 0 100 100" x="0px" y="0px">
