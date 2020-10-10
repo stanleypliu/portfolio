@@ -3,7 +3,8 @@
         <div class="hero__bracket"></div>
         <div class="hero__text">
             <h1>{{ name }}</h1>
-            <h3>{{ desc }}</h3>
+            <p>{{ desc }}</p>
+            <h3 id="hero__skills">{{ skills }}</h3>
             <div class="hero__divider"></div>
         </div>
         <div class="hero__bracket"></div>
@@ -16,7 +17,8 @@
       data() {
           return {
               name: 'STANLEY LIU',
-              desc: 'UK-BASED FULL STACK DEVELOPER'
+              desc: 'UK-BASED FULL STACK DEVELOPER',
+              skills: 'Vue | SCSS | RoR'
           }
       },  
     }

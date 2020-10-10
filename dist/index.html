@@ -10,24 +10,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- <link rel="icon" type="image/x-icon" href=""> -->
   <meta name="description" content="A personal portfolio of projects from an engineer turned developer">
-
-  <!-- Facebook Open Graph data -->
   <meta property="og:title" content="Stanley Liu | Full-stack Web Developer">
   <meta property="og:type" content="website">
-  <!-- <meta property="og:url" content="" />
-  <meta property="og:image" content="" /> -->
+  <meta property="og:image" content=""> 
+  <meta property="og:image:alt" content="Screenshot of the homepage of my website"> 
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
   <meta property="og:description" content="A personal portfolio of projects from an engineer turned developer">
   <meta property="og:locale" content="en_GB">
     
 <script src="/oxygen.9ab1f702.js"></script><script src="/application.01de8a95.js"></script></head>
 <body>
-  <div id="v-app">
-    <div class="container">
-      <Hero></Hero>
-      <Navbar-vue></Navbar-vue>
-      
+  <div id="v-app" v-cloak="">
+    <div class="container--home">
+      <hero></hero>
+      <navbar-vue></navbar-vue>  
+    </div>
+    <div class="container--router">
+      <router-view></router-view>
     </div>
   </div>
   <script src="/src.e31bb0bc.js" defer=""></script>
 </body>
 </html>
+
+

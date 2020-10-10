@@ -4,7 +4,11 @@
 // Note to self, transition-point has to be a decimal for the func to spit out a  
 // percentage, setting the transition point from colour-1 to colour-2
 @mixin gradient($gradient-type, $orientation, $colour-1, $colour-2, $transition-point) {
-    background: $gradient-type($orientation, $colour-1 percentage($transition-point), $colour-2 100%);
+    background: #{$gradient-type}(#{$orientation}, #{$colour-1} percentage($transition-point), #{$colour-2} 100%);
+}
+
+@mixin bg-color($background-colour) {
+  
 }
 
 

@@ -27,13 +27,13 @@ button:focus {
 
 // Base styles
 body {
-    // Todo: need to debug mixin
-    // @include gradient(linear-gradient, 0deg, $deep-space, $periwinkle, 0.8);
-
-
-    height: 100vh;
     color: $body-font-color;
+    height: 100vh;
 }
+
+// Body colour variants
+
+
 
 h1 {
     @include h1;
@@ -58,10 +58,10 @@ small {
 
 // Base container used for almost all elements on the website
 .container {
+    @include responsive(max-width, $small, $medium, $large);
     margin: 0 auto;
     width: 100%;
 
-    @include responsive(max-width, $small, $medium, $large);
 
     &--basic {
         @include flex;
@@ -86,7 +86,7 @@ small {
 
     // Section containers
     &--home {
-        background-color: $deep-space-faded;
+        @include gradient(linear-gradient, 140deg, $camel, $deep-space-faded, 0.4);
         height: 100vh;
     }
 

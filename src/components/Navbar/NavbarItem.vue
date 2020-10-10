@@ -39,7 +39,7 @@
                 @mouseleave="hover = false"
                 @click="showAndScrollToDiv"
             >
-                <router-link :to='link.route'>
+                <router-link :to='link.route' class="hvr-underline-from-left">
                     {{ link.name }}
                 </router-link>
             </h2>
@@ -72,7 +72,11 @@
             }
         },
         computed: {
-            
+            changeBackground() {
+                if (this.hover) {
+                    document.body.classList.add(`bgcolor-${this.id}`);
+                }
+            }
         }
     }
 </script>
