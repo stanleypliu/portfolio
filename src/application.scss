@@ -5,7 +5,7 @@
 
 // Utilities
 @import '../assets/stylesheets/utilities/mixins';
-@import '../assets/stylesheets/utilities/rem-calc';
+@import '../assets/stylesheets/utilities/functions';
 
 // Base
 @import '../assets/stylesheets/base/base';
@@ -16,4 +16,4 @@
 @import '../assets/stylesheets/components/project-showcase';
 
 // Third party assets
-@import '../assets/stylesheets/vendor/hover.css';
+@import '../assets/stylesheets/vendor/hover.scss';

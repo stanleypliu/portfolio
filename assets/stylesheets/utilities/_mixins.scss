@@ -61,6 +61,32 @@
     @include responsive(font-size, rem-calc(8), rem-calc(12), rem-calc(12));
 }
 
+@mixin hr {
+  height: 8px;
+  background-color: rgba($dark-brown, 0.8);
+  margin-bottom: rem-calc(20);
+}
+
+//-------------------------------------------------
+// Spacing
+//-------------------------------------------------
+$navbar-options: 2;
+
+// TODO - why is the if function not working? Need to read SASS docs to find out why
+@mixin navbar-text-positioning {
+  position: absolute;
+
+  @each $i in $navbar-options {
+    @if $i == 1 {
+      top: -150%; 
+      bottom: 0;
+    }
+    @else if $i == 2 {
+      top: 150%;
+    }
+  }
+}
+
 //--------------------------------------------------
 // responsive mixins
 //--------------------------------------------------

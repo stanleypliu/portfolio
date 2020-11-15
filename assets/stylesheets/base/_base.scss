@@ -81,7 +81,8 @@ small {
 
     // Section containers
     &--home {
-        @include gradient(linear-gradient, 140deg, $camel, rgba($deep-space-faded, 0.6), 0.4);
+        @include flex;
+        background-color: $ocean;
         height: 100vh;
     }
 

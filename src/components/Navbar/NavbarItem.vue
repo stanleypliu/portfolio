@@ -1,24 +1,21 @@
 <template>
-    <li class="navbar__link">
-        <div 
-            :class="[ id % 2 == 0 ? 'navbar__item' : 'navbar__item--reverse' ]"
-        >
-            <template v-if="link.image">
-                    <img 
-                        class="navbar__image"
-                        :id="`navbar__image--${id}`"
-                        :src="link.image" 
-                        :alt="`Navigation image for ${link.name}`" 
-                        v-if="hover"
-                    >
-            </template>
-            <template v-else>
-                    <svg height='100px' width='100px' 
-                    id="navbar__svg" v-if="hover"
-                    xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" 
-                    viewBox="0 0 100 100" x="0px" y="0px">
-                    <title>Artboard 9</title>
-                    <path d="M12.82,96.74H87.18A8.83,8.83,0,0,0,96,87.91V40.69
+ <li class="navbar__link">
+  <div class="navbar__item">
+   <template v-if="link.svg">
+    <svg
+     height="100px"
+     width="100px"
+     id="navbar__svg"
+     v-if="hover"
+     xmlns="http://www.w3.org/2000/svg"
+     data-name="Layer 1"
+     viewBox="0 0 100 100"
+     x="0px"
+     y="0px"
+    >
+     <title>Artboard 9</title>
+     <path
+      d="M12.82,96.74H87.18A8.83,8.83,0,0,0,96,87.91V40.69
                     a2.5,2.5,0,0,0-.89-1.91L82.8,28.38V10.25a7,7,0,0,0-7-7H24.69
                     a7,7,0,0,0-7,7V28L4.89,38.78A2.5,2.5,0,0,0,4,40.69V87.91
                     A8.83,8.83,0,0,0,12.82,96.74Zm74.35-5H12.82A3.83,3.83,0,0,1,
@@ -31,52 +28,62 @@
                     A15.94,15.94,0,1,1,65.94,34.73V39a2.79,2.79,0,0,1-5.57,0
                     V34.73a10.4,10.4,0,1,0-4,8.13A7.78,7.78,0,0,0,70.94,39
                     V34.73A20.94,20.94,0,1,0,50,55.67ZM50,40.1a5.37,5.37,0,1,1,
-                    5.37-5.37A5.37,5.37,0,0,1,50,40.1Z"></path></svg>
-            </template> 
-            <h2 
-                class="navbar__text"
-                @mouseenter="hover = true"
-                @mouseleave="hover = false"
-                @click="showAndScrollToDiv"
-            >
-                <router-link :to='link.route' class="hvr-underline-from-left">
-                    {{ link.name }}
-                </router-link>
-            </h2>
-        </div>
-    </li>
+                    5.37-5.37A5.37,5.37,0,0,1,50,40.1Z"
+     ></path>
+    </svg>
+   </template>
+   <h2
+    class="navbar__text"
+    @mouseenter="setHover"
+    @mouseleave="unsetHover"
+    @click="showAndScrollToDiv"
+   >
+    <router-link :to="link.route">
+     {{ link.name }}
+    </router-link>
+   </h2>
+  </div>
+ </li>
 </template>
 
 <script>
-    export default {
-        name: 'NavbarItem',
-        props: {
-            link: {
-                type: Object,
-                default: {
-                    type: ''
-                }
-            },
-            id: Number
-        },
-        data() {
-            return {
-                hover: false
-            }
-        },
-        methods: {
-            showAndScrollToDiv() {
-                const routerView = document.querySelector('.container--router');
-                routerView.style.display = 'block';
-                routerView.scrollIntoView({behavior: 'smooth'});
-            }
-        },
-        computed: {
-            changeBackground() {
-                if (this.hover) {
-                    document.body.classList.add(`bgcolor-${this.id}`);
-                }
-            }
-        }
-    }
+export default {
+ name: "NavbarItem",
+ props: {
+  link: {
+   type: Object,
+   default: {
+    type: "",
+   },
+  },
+  id: Number,
+ },
+ data() {
+  return {
+   hover: false,
+  };
+ },
+ methods: {
+  showAndScrollToDiv() {
+   const routerView = document.querySelector(".container--router");
+   routerView.style.display = "block";
+   routerView.scrollIntoView({ behavior: "smooth" });
+  },
+  setHover() {
+   console.log();
+   if (this.link.svg) {
+    return (this.hover = true);
+   } else if (this.link.name === "Projects") {
+    this.$emit("hover", this.link.name);
+   }
+  },
+  unsetHover() {
+   if (this.link.svg) {
+    return (this.hover = false);
+   } else if (this.link.name === "Projects") {
+    this.$emit("no-hover", this.link.name);
+   }
+  },
+ },
+};
 </script>

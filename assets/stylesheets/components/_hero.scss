@@ -1,27 +1,52 @@
-.hero {
-    @include flex-center;
-    border-bottom: 1px solid $periwinkle;
-    width: 60%;
-    margin: 0 auto;
-    min-height: 25vh;
+@keyframes fade-in-from-left {
+    0% {
+        margin-left: -100%;
+        opacity: 0;
+    }
 
-    &__text {
-        @include flex;
-        @include flex-column;
-        @include flex-h-around;
-        text-align: center;
-
-        h1 {
-            margin-top: rem-calc(20);
-        }
-
-        h1, p, .hero__divider {
-            margin-bottom: rem-calc(20);
-        }
+    100% {
+        margin-left: 0;
+        opacity: 1;
     }
 }
 
-#hero__skills {
-    color: $maximum-purple;
-    font-weight: bold;
+.hero-sidebar {
+    @include flex-center;
+    background-color: $off-yellow;
+    
+    padding-right: 3%;
+    padding-left: rem-calc(130);
+    
+    width: 25%;
+
+    animation: fade-in-from-left 1s forwards;
+
+    &__text {
+        text-align: center;
+
+        h1 {
+            font-size: rem-calc(100);
+            margin-top: rem-calc(20);
+            text-align: right;
+        }
+
+        h3 {
+            font-weight: $regular;
+        }
+
+        hr {
+            @include hr;
+        }
+    }
+
+        &__description {
+            font-size: rem-calc(30);
+            font-style: italic;
+            margin-bottom: rem-calc(30);
+        }
+
+        &__skills {
+            color: $black;
+            font-size: rem-calc(24);
+        }
 }

@@ -12,10 +12,10 @@
   content: "";
   position: absolute;
   z-index: -1;
-  left: 0;
   right: 100%;
   bottom: 0;
-  background: white;
+  left: 0;
+  background: $off-yellow;
   height: 4px;
   -webkit-transition-property: right;
   transition-property: right;

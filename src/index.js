@@ -6,8 +6,8 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 // Components
-import Hero from './components/Hero.vue';
-import NavbarVue from './components/Navbar/NavbarVue.vue';
+import HeroSidebar from './components/Hero/HeroSidebar.vue';
+import HomepageNavbar from './components/Navbar/HomepageNavbar.vue';
 import ProjectShowcase from './components/Projects/ProjectShowcase.vue';
 
 
@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
         el: '#v-app',
         router,
         components: {
-            Hero,
-            NavbarVue
+            HeroSidebar,
+            HomepageNavbar
         }
       })
 
