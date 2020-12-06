@@ -11,6 +11,19 @@
     }
 }
 
+@keyframes fade-in-from-right {
+    0% {
+        transform-origin: right;
+        transform: translateX(200%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 
 // CLASSES
 .homepage-navbar {
@@ -20,6 +33,40 @@
     height: 100vh;
     width: 100%;
 
+    animation: fade-in-from-right 1s forwards;
+
+    &__headshot {
+        background: url('../assets/images/photos/headshot.jpg');
+        background-size: cover;
+        height: 40vh;
+        width: 40vh;
+        
+        opacity: 0;
+        
+        position: absolute;
+        left: 35%;
+        top: 5%;
+
+        z-index: -1;
+
+        &.active--about {
+            animation: image-appear 1s forwards;
+        }
+
+        &::after {
+            @include gradient(linear-gradient, 0deg, $ocean, transparent, 0);
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            height: 100%;
+            width: 100%;
+
+            z-index: 1;
+        }
+    }
+
     &__projects {
         background-repeat: no-repeat;
         height: 40vh;
@@ -28,7 +75,7 @@
         opacity: 0;
         position: relative;
 
-        &.active {
+        &.active--projects {
             animation: image-appear 1s forwards;
         }
 
@@ -94,17 +141,18 @@
     }
 
     &__link {
-        border: 1px solid $white;
+        background-color: $off-yellow;
         border-radius: 20px;
+        box-shadow: 5px 5px 4px rgba($dark-brown, 0.7);
         padding: rem-calc(10 20);
         margin: rem-calc(0 100);
 
         a {
-            color: $white;
+            color: $dark-brown;
             transition: 0.2s;
 
             &:hover {
-                color: $off-yellow;
+                color: $dark-brown;
             }
         }
 
@@ -117,9 +165,8 @@
 }
 
 #navbar__svg {
-    max-height: 30vh;
     position: absolute;
     fill: $white;
-    right: 30%;
-    bottom: 130%;
+    right: 20%;
+    bottom: rem-calc(100);
 }

@@ -11,17 +11,22 @@
 }
 
 .hero-sidebar {
-    @include flex-center;
+    @include flex;
+    @include flex-column;
+    
     background-color: $off-yellow;
     
-    padding-right: 3%;
+    padding-right: 1%;
     padding-left: rem-calc(130);
     
     width: 25%;
 
+    justify-content: center;
+
     animation: fade-in-from-left 1s forwards;
 
     &__text {
+        align-self: flex-end;
         text-align: center;
 
         h1 {
@@ -49,4 +54,9 @@
             color: $black;
             font-size: rem-calc(24);
         }
+
+    &__footer {
+        // margin-top: rem-calc(150);
+        text-align: center;
+    }
 }

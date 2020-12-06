@@ -7,11 +7,12 @@
     :link="link"
     :id="index"
     :key="index"
-    @hover="setHover"
-    @no-hover="unsetHover"
+    @hover="setHover($event)"
+    @no-hover="unsetHover()"
    />
   </ul>
   <div class="homepage-navbar__projects--justbikes" :class="activeClass"></div>
+  <div class="homepage-navbar__headshot" :class="activeClass"></div>
  </nav>
 </template>
 
@@ -23,7 +24,7 @@ import headshot from "../../../assets/images/photos/headshot.jpg";
 export default {
  name: "HomepageNavbar",
  components: {
-  NavbarItem,
+  NavbarItem
  },
  data() {
   return {
@@ -36,11 +37,11 @@ export default {
   };
  },
  methods: {
-     setHover() {
-         this.activeClass = 'active'
+     setHover($event) {
+        this.activeClass = `active--${$event.toLowerCase()}`
      },
      unsetHover() {
-         this.activeClass = ''
+        this.activeClass = ''
      }
  },
 };

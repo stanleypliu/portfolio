@@ -1,5 +1,7 @@
 <template>
- <li class="navbar__link">
+ <li class="navbar__link"    
+    @mouseenter="setHover"
+    @mouseleave="unsetHover">
   <div class="navbar__item">
    <template v-if="link.svg">
     <svg
@@ -32,10 +34,8 @@
      ></path>
     </svg>
    </template>
-   <h2
+   <h3
     class="navbar__text"
-    @mouseenter="setHover"
-    @mouseleave="unsetHover"
     @click="showAndScrollToDiv"
    >
     <router-link :to="link.route">
@@ -70,17 +70,16 @@ export default {
    routerView.scrollIntoView({ behavior: "smooth" });
   },
   setHover() {
-   console.log();
    if (this.link.svg) {
     return (this.hover = true);
-   } else if (this.link.name === "Projects") {
+   } else {
     this.$emit("hover", this.link.name);
    }
   },
   unsetHover() {
    if (this.link.svg) {
     return (this.hover = false);
-   } else if (this.link.name === "Projects") {
+   } else {
     this.$emit("no-hover", this.link.name);
    }
   },
