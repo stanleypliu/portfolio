@@ -1,13 +1,18 @@
+// KEYFRAMES
+
 @keyframes image-appear {
     0% {
         opacity: 0;
     }
 
     100% {
+        transform: scale(1.01);
         opacity: 1;
     }
 }
 
+
+// CLASSES
 .homepage-navbar {
     @include flex;
     @include flex-column;
@@ -16,68 +21,61 @@
     width: 100%;
 
     &__projects {
-        background: url('../assets/images/photos/revonew.png');
-        background-size: cover;
         background-repeat: no-repeat;
-        margin-left: rem-calc(40);
-        margin-bottom: rem-calc(40);
         height: 40vh;
         width: 40vw;
 
-        align-self: flex-start;
-
-        position: relative;
-
         opacity: 0;
+        position: relative;
 
         &.active {
             animation: image-appear 1s forwards;
         }
 
-        &::after {
-            @include gradient(linear-gradient, 0deg, $ocean, transparent, 0);
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+        &--revonew {
+            @extend .homepage-navbar__projects;
+            background: url('../assets/images/photos/revonew.png');
+            background-size: cover;
+            margin-left: rem-calc(40);
+            margin-bottom: rem-calc(40);
 
-            height: 100%;
-            width: 100%;
+            align-self: flex-start;
 
-            z-index: 1;
-        }
-    }
-
-    &__justbikes {
-        background: url('../assets/images/photos/justbikes.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin-right: rem-calc(40);
-        margin-top: rem-calc(40);
-        height: 40vh;
-        width: 40vw;
-
-        align-self: flex-end;
-
-        position: relative;
-        opacity: 0;
-
-        &.active {
-            animation: image-appear 1s forwards;
+            &::after {
+                @include gradient(linear-gradient, 0deg, $ocean, transparent, 0);
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+    
+                height: 100%;
+                width: 100%;
+    
+                z-index: 1;
+            }
         }
 
+        &--justbikes {
+            @extend .homepage-navbar__projects;
+            background: url('../assets/images/photos/justbikes.png');
+            background-size: cover;
+            margin-top: rem-calc(40);
+            margin-right: rem-calc(40);
 
-        &::after {
-            @include gradient(linear-gradient, 180deg, $ocean, transparent, 0);
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+            align-self: flex-end;
 
-            height: 100%;
-            width: 100%;
-
-            z-index: 1;
+            &::after {
+                @include gradient(linear-gradient, 180deg, $ocean, transparent, 0);
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+    
+                height: 100%;
+                width: 100%;
+    
+                z-index: 1;
+            }
         }
     }
 }

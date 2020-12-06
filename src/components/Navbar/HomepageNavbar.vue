@@ -1,6 +1,6 @@
 <template>
  <nav class="homepage-navbar">
-  <div class="homepage-navbar__projects" :class="activeClass"></div>
+  <div class="homepage-navbar__projects--revonew" :class="activeClass"></div>
   <ul class="navbar">
    <navbar-item
     v-for="(link, index) in links"
@@ -11,7 +11,7 @@
     @no-hover="unsetHover"
    />
   </ul>
-  <div class="homepage-navbar__justbikes" :class="activeClass"></div>
+  <div class="homepage-navbar__projects--justbikes" :class="activeClass"></div>
  </nav>
 </template>
 
