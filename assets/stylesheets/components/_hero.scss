@@ -17,9 +17,9 @@
     background-color: $off-yellow;
     
     padding-right: 1%;
-    padding-left: rem-calc(130);
+    padding-left: rem-calc(200);
     
-    width: 25%;
+    width: 40%;
 
     justify-content: center;
 
@@ -27,12 +27,11 @@
 
     &__text {
         align-self: flex-end;
-        text-align: center;
+        text-align: right;
 
         h1 {
             font-size: rem-calc(100);
             margin-top: rem-calc(20);
-            text-align: right;
         }
 
         h3 {
@@ -48,15 +47,17 @@
             font-size: rem-calc(30);
             font-style: italic;
             margin-bottom: rem-calc(30);
+            text-align: center;
         }
 
         &__skills {
             color: $black;
             font-size: rem-calc(24);
+            text-align: center;
         }
 
     &__footer {
-        // margin-top: rem-calc(150);
+        margin-top: rem-calc(70);
         text-align: center;
     }
 }
