@@ -81,9 +81,9 @@ small {
 
     // Section containers
     &--home {
+        @extend .container;
         @include flex;
         background-color: $ocean;
-        height: 100vh;
     }
 
     &--router {

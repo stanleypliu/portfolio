@@ -31,7 +31,7 @@
     @include flex-column;
     @include flex-h-center;
     height: 100vh;
-    width: 100%;
+    width: 80%;
 
     animation: fade-in-from-right 1s forwards;
 
@@ -145,7 +145,7 @@
         border-radius: 20px;
         box-shadow: 5px 5px 4px rgba($dark-brown, 0.7);
         padding: rem-calc(10 20);
-        margin: rem-calc(0 100);
+        // margin: rem-calc(0 100);
 
         a {
             color: $dark-brown;
