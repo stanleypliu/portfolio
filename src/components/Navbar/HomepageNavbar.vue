@@ -29,9 +29,9 @@ export default {
  data() {
   return {
    links: [
-    { name: "Projects", route: "/projects" },
-    { name: "About", route: "/about" },
-    { name: "Contact Me", route: "/contact-me", svg: true },
+    { name: "PROJECTS", route: "/projects" },
+    { name: "ABOUT", route: "/about" },
+    { name: "CONTACT ME", route: "/contact-me", svg: true },
    ],
    activeClass: ''
   };

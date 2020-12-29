@@ -10,10 +10,12 @@ import HeroSidebar from './components/Hero/HeroSidebar.vue';
 import HomepageNavbar from './components/Navbar/HomepageNavbar.vue';
 import ProjectShowcase from './components/Projects/ProjectShowcase.vue';
 
-
 //Routes
 
 const routes = [
+  {
+    path: '/'
+  },
   {
     path: '/projects',
     component: ProjectShowcase

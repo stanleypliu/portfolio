@@ -1,7 +1,6 @@
 <template>
  <div class="project-showcase">
-  <div class="container">
-   <h2>My Work</h2>
+   <h3>My Work</h3>
    <hr/>
    <div class="project-showcase__pictures">
     <project-showcase-item
@@ -13,7 +12,6 @@
      :title="project.title"
     />
    </div>
-  </div>
  </div>
 </template>
 

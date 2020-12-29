@@ -11,14 +11,18 @@
 .hero-sidebar {
     @include flex;
     @include flex-column;
-    
+    position: fixed;
+    left: 0;
     background-color: $off-yellow;
     
     padding-right: 1%;
     padding-left: rem-calc(20);
     
+    height: 100%;
     width: 20%;
-
+    
+    z-index: 100;
+    
     justify-content: center;
 
     animation: fade-in-from-left 1s forwards;
@@ -28,7 +32,7 @@
         text-align: right;
 
         h1 {
-            font-size: rem-calc(70);
+            font-size: rem-calc(50);
             margin-top: rem-calc(20);
         }
 
@@ -38,11 +42,14 @@
 
         hr {
             @include hr;
+            margin-left: 10%;
+            
+            width: 90%;
         }
     }
 
         &__description {
-            font-size: rem-calc(30);
+            font-size: rem-calc(28);
             font-style: italic;
             margin-bottom: rem-calc(30);
             text-align: center;

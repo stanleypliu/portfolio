@@ -30,8 +30,11 @@
     @include flex;
     @include flex-column;
     @include flex-h-center;
+    background-image: url('../assets/images/photos/background.png');
+    background-size: cover;
+
     height: 100vh;
-    width: 80%;
+    width: 100%;
 
     animation: fade-in-from-right 1s forwards;
 
@@ -45,32 +48,19 @@
         
         position: absolute;
         left: 35%;
-        top: 5%;
+        top: 2%;
 
         z-index: -1;
 
         &.active--about {
             animation: image-appear 1s forwards;
         }
-
-        &::after {
-            @include gradient(linear-gradient, 0deg, $ocean, transparent, 0);
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-
-            height: 100%;
-            width: 100%;
-
-            z-index: 1;
-        }
     }
 
     &__projects {
         background-repeat: no-repeat;
-        height: 40vh;
-        width: 40vw;
+        height: rem-calc(200);
+        width: rem-calc(350);
 
         opacity: 0;
         position: relative;
@@ -88,17 +78,20 @@
 
             align-self: flex-start;
 
+            position: relative;
+
             &::after {
-                @include gradient(linear-gradient, 0deg, $ocean, transparent, 0);
                 content: '';
+
                 position: absolute;
-                top: 0;
-                left: 0;
-    
+                top: 1%;
+                left: 1%;
+                
                 height: 100%;
                 width: 100%;
-    
-                z-index: 1;
+
+                border-bottom: 1px solid $white;
+                border-right: 1px solid $white;
             }
         }
 
@@ -111,17 +104,19 @@
 
             align-self: flex-end;
 
+            
             &::after {
-                @include gradient(linear-gradient, 180deg, $ocean, transparent, 0);
                 content: '';
+
                 position: absolute;
-                top: 0;
-                left: 0;
-    
+                top: -1%;
+                left: -1%;
+                
                 height: 100%;
                 width: 100%;
-    
-                z-index: 1;
+
+                border-left: 1px solid $white;
+                border-top: 1px solid $white;
             }
         }
     }
@@ -141,11 +136,8 @@
     }
 
     &__link {
-        background-color: $off-yellow;
-        border-radius: 20px;
-        box-shadow: 5px 5px 4px rgba($dark-brown, 0.7);
         padding: rem-calc(10 20);
-        // margin: rem-calc(0 100);
+        margin: rem-calc(0 50);
 
         a {
             color: $dark-brown;

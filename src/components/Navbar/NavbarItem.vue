@@ -35,13 +35,13 @@
     </svg>
    </template>
    <h3
-    class="navbar__text"
+    class="navbar__text hvr-underline-from-left"
     @click="showAndScrollToDiv"
    >
     <router-link :to="link.route">
      {{ link.name }}
     </router-link>
-   </h2>
+   </h3>
   </div>
  </li>
 </template>
@@ -66,7 +66,7 @@ export default {
  methods: {
   showAndScrollToDiv() {
    const routerView = document.querySelector(".container--router");
-   routerView.style.display = "block";
+   routerView.style.display = "flex";
    routerView.scrollIntoView({ behavior: "smooth" });
   },
   setHover() {

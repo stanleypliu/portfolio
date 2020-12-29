@@ -7,7 +7,7 @@
    @mouseenter="hover = true"
    @mouseleave="hover = false"
   />
-  <h2>{{ title }}</h2>
+  <h3>{{ title }}</h3>
   <div class="project-showcase__project-desc" v-show="hover">
     <p>{{ desc }}</p>
   </div>

@@ -1,6 +1,8 @@
 .project-showcase {
-    background-color: $deep-space-faded;
+    background-image: url('../assets/images/photos/background.png');
+    background-size: cover;
     height: 100vh;
+    width: 100%;
 
     h2 {
         padding: rem-calc(40 40 20 40);

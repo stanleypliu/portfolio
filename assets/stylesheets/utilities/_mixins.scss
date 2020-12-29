@@ -7,11 +7,6 @@
     background: #{$gradient-type}(#{$orientation}, #{$colour-1} percentage($transition-point), #{$colour-2} 100%);
 }
 
-@mixin bg-color($background-colour) {
-  
-}
-
-
 //--------------------------------------------------
 // Text
 //--------------------------------------------------
@@ -42,7 +37,7 @@
 
 @mixin h3 {
     @include header-text;
-    @include responsive(font-size, rem-calc(20), rem-calc(28), rem-calc(32));
+    @include responsive(font-size, rem-calc(20), rem-calc(24), rem-calc(28));
 }
 
 @mixin p {
