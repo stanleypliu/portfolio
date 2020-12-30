@@ -27,7 +27,7 @@
 
 @mixin h1 {
     @include header-text;
-    @include responsive(font-size, rem-calc(48), rem-calc(56), rem-calc(64));
+    @include responsive(font-size, rem-calc(44), rem-calc(50), rem-calc(50));
 }
 
 @mixin h2 {
@@ -37,7 +37,7 @@
 
 @mixin h3 {
     @include header-text;
-    @include responsive(font-size, rem-calc(20), rem-calc(24), rem-calc(28));
+    @include responsive(font-size, rem-calc(20), rem-calc(24), rem-calc(24));
 }
 
 @mixin p {
