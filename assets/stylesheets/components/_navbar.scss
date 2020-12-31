@@ -154,6 +154,11 @@
             background-color: $black;
         }
     }
+
+    &__text {
+        font-family: "Source Sans Pro SemiBold", sans-serif;
+        font-weight: 600;
+    }
 }
 
 #navbar__svg {

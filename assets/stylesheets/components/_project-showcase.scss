@@ -1,3 +1,14 @@
+@keyframes lengthen-box {
+    0% {
+        height: 40vh;
+    }
+
+    100% {
+        height: 80vh;
+    }
+}
+
+
 .project-showcase {
     background-image: url('../assets/images/photos/background.png');
     background-size: cover;
@@ -6,7 +17,7 @@
 
     h2 {
         padding: rem-calc(40 40 20 40);
-
+        font-family: "Source Sans Pro SemiBold", sans-serif;
     }
 
     hr {
@@ -14,32 +25,31 @@
     }
 
     &__item {
-        position: relative;
+        background-color: $off-yellow;
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: rem-calc(20);
+        max-width: 35vw;
+
+        animation: lengthen-box 2s forwards;
+
+        h3 {
+            font-family: "Source Sans Pro Regular", sans-serif;
+            margin-top: rem-calc(20);
+        }
     }
 
-    &__pictures {
-        @include flex-center;
+    &__projects {
+        @include flex;
+        @include flex-h-around;
     }
 
     &__picture {
         height: 40vh;
-        padding-left: rem-calc(40);
-        padding-right: rem-calc(40);
-        transition: 0.2s ease-in-out;
-
-        &:hover {
-            transform: scale(1.05);
-            filter: drop-shadow(3px 3px 10px $grey);
-        }
     }
 
-
-
     &__project-desc {
-        color: $silver-pink;
-        position: absolute;
-        top: 100%;
-        left: rem-calc(40);
-        max-width: 35vw;
+        font-family: "Source Sans Pro Regular", sans-serif;
+
+        animation: fade-in 2.5s forwards;
     }
 }

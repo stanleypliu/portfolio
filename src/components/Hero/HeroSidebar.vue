@@ -5,13 +5,13 @@
         <h1>{{ name }}</h1>
         <hr />
         <h3 class="hero-sidebar__description">{{ desc }}</h3>
-        <h3 class="hero-sidebar__skills">{{ skills }}</h3>
       </template>
       <template v-else>
         <router-link
           v-for="(route, index) in this.$router.options.routes"
           :key="index"
           :to="route.path"
+          @click="scrollToHome"
         >
           <h3>{{ route.path | turnIntoName }}</h3>
         </router-link>
@@ -31,7 +31,6 @@ export default {
     return {
       name: 'Stanley Liu',
       desc: 'Full Stack Web Developer',
-      skills: '',
       homeElVisible: undefined
     }
   },
@@ -70,11 +69,11 @@ export default {
     watchHomeElem.observe(homeEl)
   },
   methods: {
-    showAndScrollToDiv(event) {
+    scrollToHome(event) {
       console.log(event.target)
-      //    const routerView = document.querySelector(".container--router");
-      //    routerView.style.display = "flex";
-      //    routerView.scrollIntoView({ behavior: "smooth" });
+      // if (event.target === "") { return }
+      // const home = document.querySelector(".container--home");
+      // home.scrollIntoView({ behavior: "smooth" });
     }
   },
 }

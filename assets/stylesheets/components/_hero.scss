@@ -1,13 +1,3 @@
-@keyframes fade-in-from-left {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 .hero-sidebar {
     @include flex;
     @include flex-column;
@@ -25,7 +15,7 @@
     
     justify-content: center;
 
-    animation: fade-in-from-left 1s forwards;
+    animation: fade-in 1s forwards;
 
     &__text {
         align-self: flex-end;

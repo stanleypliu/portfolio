@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Oxygen Bold";
-    src: local('Roboto'), url("../../fonts/Oxygen-Bold.ttf") format("ttf");
+    src: local('Oxygen Bold'), url("../../fonts/Oxygen-Bold.ttf") format("ttf");
 }
 
 @font-face {

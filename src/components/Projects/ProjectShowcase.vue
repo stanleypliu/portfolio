@@ -1,8 +1,7 @@
 <template>
  <div class="project-showcase">
-   <h3>My Work</h3>
-   <hr/>
-   <div class="project-showcase__pictures">
+   <h2>My work.</h2>
+   <div class="project-showcase__projects">
     <project-showcase-item
      v-for="(project, index) in projects"
      :key="index"
@@ -10,6 +9,7 @@
      :alt="project.alt"
      :desc="project.desc"
      :title="project.title"
+     :link="project.link"
     />
    </div>
  </div>
@@ -30,12 +30,13 @@ export default {
      title: 'Revonew',
      alt: "Currency-exchange marketplace MVP",
      desc: `A currency-exchange marketplace MVP to allow users to search
-            for and exchange little-used currencies with each other, with chat 
-            functionality and real-time currency conversion via calls made to
-            the Fixer API. 
+            for and exchange little-used currencies with each other, with ActionCable
+            chat functionality and real-time currency conversion via calls made to
+            the Fixer API, and integrating Stripe for mock payments.
             Built with jQuery and vanilla JavaScript on Rails, 
             backed by a PostgreSQL database. Consumes the Mapbox API for geolocation. 
             `,
+      link: "http://www.revonew.xyz"
     },
     {
      picture: images["justbikes"],
@@ -44,7 +45,9 @@ export default {
      desc: `An AirBnB style website allowing users to both book and rent
             out bicycles, sorting by geographical distance to user. 
             Built with JavaScript and Rails, with a PostgreSQL database.
+            Consumes the Mapbox API.
             `,
+      link: "http://justbikes.herokuapp.com/"
     },
    ],
   };
